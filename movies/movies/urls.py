@@ -19,6 +19,7 @@ from django.contrib import admin
 from . import views
 
 urlpatterns = [
+    url(r'^films/', include('films.urls')),
     url(r'^$', views.hello_world),
     url(r'^admin/', admin.site.urls),
 ]
