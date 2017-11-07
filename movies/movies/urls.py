@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
+""" only needed for local static, I think """
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 from . import views
 
 urlpatterns = [
@@ -23,3 +26,6 @@ urlpatterns = [
     url(r'^$', views.welcome_to_films),
     url(r'^admin/', admin.site.urls),
 ]
+
+""" only needed in debug and local """
+urlpatterns += staticfiles_urlpatterns()
