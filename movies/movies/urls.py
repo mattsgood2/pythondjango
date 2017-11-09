@@ -23,6 +23,8 @@ from . import views
 
 urlpatterns = [
     url(r'^films/', include('films.urls')),
+    #below may not be needed 
+    url(r'^$', views.HomeView.as_view(), name='home'),
     url(r'^$', views.welcome_to_films),
     url(r'^admin/', admin.site.urls),
 ]
