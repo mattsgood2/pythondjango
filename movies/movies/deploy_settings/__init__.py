@@ -1,4 +1,5 @@
 from dj_database_url
+
 from movies.settings import *
 
 DEBUG = False
