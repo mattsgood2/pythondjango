@@ -1,23 +1,11 @@
-{% for film in films %}
-<h2>{{ film.title }}</h2>
-{{ film.description }}
-{% endfor %}
+{% extends 'layout.html' %}
 
-"""delete this below testing html """
-{% load static %}
-{% load static from staticfiles %}
 
-<!doctype html>
-<html>
-  <head>
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/layout.css' %}" >
-  </head>
-  <div>
-      <body>{% for film in films %}
-          <h2>{{ film.title }}</h2>
-          {{ film.description }}
-          {% endfor %}
-      </body>
-  </div>
-</html>
+
+{% block title %}{{ Film.title}}{% endblock %}
+
+{% block content %}
+    <h2>{{Film.title}}</h2>
+    {{ Film.description }}
+
+{% endblock %}
