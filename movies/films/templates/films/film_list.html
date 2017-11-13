@@ -10,3 +10,20 @@
 
 {% endfor %}
 {% endblock%}
+
+
+{% extends "layout.html" %}
+
+{% block title %} FILMS {% endblock %}
+
+{% block content %}
+<article>
+    <h2>{{film.title}}</h2>
+    {{ film.description }}
+
+    <section>
+        {% for film in films %}
+    
+    </section>
+</article>
+{% endblock %}
