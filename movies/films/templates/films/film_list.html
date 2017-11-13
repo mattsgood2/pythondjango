@@ -5,7 +5,8 @@
 {% block content %}
 <h2>{{ film.title }}</h2>
 {{ film.description }}
+{% for film in films %}
 
 
 {% endfor %}
-{% endblock %}
+{% endblock%}
