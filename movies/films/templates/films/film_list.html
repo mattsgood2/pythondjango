@@ -1,11 +1,8 @@
-{% extends 'layout.html' %}
-
-
-
-{% block title %}{{ Film.title}}{% endblock %}
+{% extends "layout.html" %}
 
 {% block content %}
-    <h2>{{Film.title}}</h2>
-    {{ Film.description }}
-
-{% endblock %}
+{% for film in films %}
+<h2>{{ film.title }}</h2>
+{{film.description}}
+{% endfor %}
+{% endblock%}
