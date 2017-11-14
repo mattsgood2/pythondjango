@@ -36,9 +36,14 @@ SECRET_KEY = 'cmpp66az&)=cqgk_uo*e8kb-)yms9+%r5l%64b4bk!^!76_1bs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ #'matthewgoodman.herokuapp.com',
-                  #'127.0.0.1'
-                 ]
+SECRET_KEY = get_env_variable("SECRET_KEY")
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+
+
+ALLOWED_HOSTS = ['localhost',
+                 '.herokuapp.com',                 ]
 
 
 # Application definition
