@@ -5,11 +5,12 @@
 
 {% block content %}
 <article>
-    <h2>{{film.title}}</h2>
-    {{ film.description }}
+
 
     <section>
         {% for film in films %}
+        <h2>{{film.title}}</h2>
+        {{ film.description }}
 
     </section>
 </article>
