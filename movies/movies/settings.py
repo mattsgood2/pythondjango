@@ -36,9 +36,7 @@ SECRET_KEY = 'cmpp66az&)=cqgk_uo*e8kb-)yms9+%r5l%64b4bk!^!76_1bs'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ #'matthewgoodman.herokuapp.com',
-                  #'127.0.0.1'
-                 ]
+ALLOWED_HOSTS = [ ]
 
 
 # Application definition
