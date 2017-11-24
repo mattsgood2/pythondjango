@@ -15,6 +15,6 @@ class FilmListView(TemplateView):
     template_name = 'films/film_list.html'
 
     def get_context_data(self, **kwargs):
-        context = super(FilmListView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         context['films'] = Film.objects.all()
         return context
