@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% load static from staticfiles %}
+
+{% block title %} {{film.title}} {% endblock %}
+
+{% block content %}
+<article>
+
+
+    <section>
+        <h2>{{film.title}}</h2>
+        {% for step in film.filmlistdetail_set.all %}
+
+        <!--{{ step.title }} - {{ step.description }}-->
+        <h3>{{ step.title }}</h3>
+            {{step.description}}
+    </section>
+
+</article>
+{% endfor %}
+{% endblock %}

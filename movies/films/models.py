@@ -10,3 +10,12 @@ class Film(models.Model):
 
     def __str__(self):
         return ('{} : {}'.format(self.title, self.description))
+
+
+class FilmListDetail(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField()
+    film = models.ForeignKey(Film)
+
+    def __str__(self):
+        return self.title

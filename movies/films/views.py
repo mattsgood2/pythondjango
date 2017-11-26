@@ -18,3 +18,8 @@ class FilmListView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['films'] = Film.objects.all()
         return context
+
+
+def filmdetail(request, pk):
+    film = Film.objects.get(pk=pk)
+    return render(request, 'films/film_detail.html', {'film': film })
