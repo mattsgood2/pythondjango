@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "films/filmdetaillayout.html" %}
 
 {% load static from staticfiles %}
 
@@ -10,8 +10,15 @@
 
     <section>
         {% for film in films %}
-        <h2>{{film.title}}</h2>
-        {{ film.description }} - {{ film.release_year }}
+        <div class="card" style="width: 20rem;">
+          <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+          <div class="card-body">
+              <h4 class="card-title">{{film.title}}</h4>
+              <p class="card-text">{{ film.description }} - {{ film.release_year }}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+    </div>
 
     </section>
 </article>
