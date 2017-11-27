@@ -3,5 +3,8 @@
 {% block title %} The Best Film's {% endblock %}
 
 {% block content %}
+<nav class="nav">
+  <a class="nav-link active" href="{% url 'films:film' %}">films</a>
+</nav>
 <h1>Welcome to Film's</h1>
 {% endblock %}

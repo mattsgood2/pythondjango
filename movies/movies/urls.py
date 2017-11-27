@@ -25,7 +25,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from . import views
 
 urlpatterns = [
-    url(r'^films/', include('films.urls')),
+    url(r'^films/', include('films.urls', namespace='films')),
     url(r'^$', TemplateView.as_view(template_name = 'home.html')),
     url(r'^admin/', admin.site.urls),
 ]
